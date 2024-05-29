@@ -5,6 +5,12 @@ In this case, we focus on converting numeric data types to strings and vice-vers
 
 
 def calculate_profit():
+    total_sales = int(input("Enter in the projected amount of total sales: "))
+    annual_profit = total_sales * 0.23
+    formatted_profit = format(annual_profit, ",.2f")
+    formatted_sales = format(total_sales, ",d")
+    print(f"Profit: ${formatted_profit}")
+    
     """
     Imagine this scenario: a company has determined that its annual profit is typically 23 percent of total sales.
     Complete this function so that it asks the user to enter in the projected amount of total sales and then displays the profit that will be made from that amount.
@@ -13,7 +19,14 @@ def calculate_profit():
     """
 
 
+
 def calculate_quotient_and_remainder():
+    integer_one = int(input("Please submit an integer: "))
+    integer_two = int(input("Please submit an integer: "))
+    quotient = integer_one // integer_two
+    remainder = integer_one % integer_two
+    print(f"{integer_two} goes into {integer_one} a total of {quotient} times with a remainder of {remainder}")
+
     """
     Complete this function so that it asks the user to input two integers.
     You program should calculate and output the quotient and remainder when the first number is divided by the second.
@@ -25,6 +38,10 @@ def calculate_quotient_and_remainder():
 
 
 def calculate_miles_per_gallon():
+    miles_driven = int(input("Miles driven: "))
+    gallons_used = int(input("Gas used in gallons: "))
+    mpg = miles_driven / gallons_used
+    print(f"Miles per gallon: {mpg:2f}")
     """
     A car's Miles Per Gallon (MPG) can be calculated using the following formula:
       MPG = Miles driven / Gallons of Gas Used
@@ -38,6 +55,18 @@ def calculate_miles_per_gallon():
 
 
 def align_text():
+    price1 = float(input("Enter price #1: "))
+    price2 = float(input("Enter price #2: "))
+    price3 = float(input("Enter price #3: "))
+
+    formatted_price1 = f"${price1:8.2f}"
+    formatted_price2 = f"${price2:8.2f}"
+    formatted_price3 = f"${price3:8.2f}"
+
+    print("\nHere are your prices!\n")
+    print(f"Price #1: {formatted_price1}")
+    print(f"Price #2: {formatted_price2}")
+    print(f"Price #3: {formatted_price3}")
     """
     Complete this function such that it asks the user to enter in 3 price values (as floating point numbers).
     The print out the price values so that they are formatted to two decimal places. Also make sure that the price values are right aligned and line up at the decimal point.
